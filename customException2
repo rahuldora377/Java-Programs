@@ -1,0 +1,30 @@
+class test{
+	public static void main(String[] args) throws Example {
+		implement obj=new implement();
+		obj.doHere();
+		System.out.println("last main");
+	}
+}
+
+class implement{
+	void doHere() throws Example{
+		int n1=10;
+		int n2=0;
+		if(n2==0){
+			throw new Example("can not divide with 0");
+		}
+		else{
+			System.out.println("finally done");
+		}
+		System.out.println("last implement");
+	}
+}
+
+class Example extends Exception
+{
+
+	Example(String msg){
+		super(msg);//calling the method of Exception
+	}	
+
+}
