@@ -1,0 +1,25 @@
+class wow{
+	public static void main(String[] args) {
+		int n1=45;
+		int n2=5;
+		try{
+		if(n2==5){
+			throw new customException("sorry can not divide by 5");
+		}
+		else{
+			System.out.println("now you can divide");
+		}
+	}
+	catch(Exception e){
+		System.out.println(e.getMessage());
+	}
+	System.out.println("i am in last");
+	}
+}
+
+class customException extends RuntimeException{
+	customException(String str){
+		super(str);
+		// System.out.println("Exception is::- "+str);
+	}
+}
